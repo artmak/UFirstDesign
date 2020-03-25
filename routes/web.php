@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*Admin panel*/
+Route::group(['prefix' => 'administrator'], function () {
+    Voyager::routes();
+});
+
+/*Routes of site*/
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('main', function (){
+    return view('main');
+});
+
